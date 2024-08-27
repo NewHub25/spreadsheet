@@ -108,12 +108,6 @@ document.addEventListener('click', (event) => {
   td.classList.add('selected');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'F2') {
-    $table?.querySelector('td.selected')?.querySelector('input')?.focus();
-  }
-});
-
 $body.addEventListener('copy', (event) => {
   event.preventDefault();
   const td = event.target.closest('td');
