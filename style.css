@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+img {
+  width: 50px;
+}
+table {
+  border-collapse: collapse;
+}
+thead th:first-child {
+  background-color: #eee;
+}
+tr th,
+tr td:first-child {
+  background-color: #eee;
+}
+th,
+td {
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  text-align: center;
+  width: 5rem;
+  height: 1.7rem;
+  position: relative;
+  &.selected {
+    background: #09f5;
+  }
+}
+/* td:active {
+  border-radius: 0.12rem;
+  outline: 2px solid #09f;
+  } */
+input {
+  border: 0;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 0.12rem;
+  &:focus {
+    opacity: 1;
+    outline: 2px solid #09f;
+  }
+}
+span,
+input {
+  position: absolute;
+  inset: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+span {
+  overflow-x: auto;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
